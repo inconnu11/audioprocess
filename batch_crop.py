@@ -31,10 +31,10 @@ for subdir in sorted(subdirList):    # 说话人list
         print(segments)
         for i in range(1, segments + 1):
             print(i)
-            if i * 16000 >= duration:
-                y = data[ (i - 1) * 16000 :]
+            if i * 5 >= duration:
+                y = data[ (i - 1) * 80000 :]
             else: 
-                y = data[(i - 1) * 16000: i * 16000]
+                y = data[(i - 1) * 80000: i * 80000]
             print(y)
             nn = fileName[:-4] + '_' + str(i)
             # librosa.output.write_wav('results/' + nn + '.wav', waveform_NOP, sr=16000)
